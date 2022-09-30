@@ -1,3 +1,15 @@
 #index:
 #    path: /
-#    controller: App\Controller\DefaultController::index
+#    controller: App\Controller\HomeController::index
+#
+#othelloInit:
+#  path: /othello/init
+#  controller: App\Controller\HomeController::index
+#
+#app_othello:
+#  path: /othello
+#  controller: App\Controller\HomeController::othelloInit
+#
+#othelloMove:
+#  path: /othello/move
+#  controller: App\Controller\HomeController::othelloMove

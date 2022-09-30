@@ -1,0 +1,41 @@
+table#othelloTable {
+    width: 70vmin;
+    height: 70vmin;
+    background-color: darkgreen;
+    border: 1px solid black;
+}
+
+i {
+    font-size: 5vmin;
+}
+
+i.fa.fa-circle[side='white']{
+    color: white;
+}
+
+i.fa.fa-circle[side='black'] {
+    color: black;
+}
+
+i.fa.fa-circle.was::before {
+    border: 6px solid red;
+    border-radius: 50%;
+}
+
+
+
+i.fa.fa-circle-thin {
+    color: black;
+}
+
+#divButton {
+    margin-top: 49vh;
+}
+
+div.row {
+    background-color: azure;
+}
+
+span {
+    font-size: 5vmin;
+}
