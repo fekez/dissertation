@@ -1,0 +1,27 @@
+section#loginSection{
+    background: rgb(137,166,172);
+    background: linear-gradient(90deg, rgba(137,166,172,1) 0%,
+                                        rgba(129,162,169,1) 15%,
+                                        rgba(148,179,184,1) 32%,
+                                        rgba(163,191,195,1) 48%,
+                                        rgba(163,191,195,1) 60%,
+                                        rgba(129,162,169,1) 85%,
+                                        rgba(137,166,172,1) 100%);
+}
+
+.hero_area {
+    min-height: auto;
+}
+
+label {
+    margin-top: 3vmin;
+}
+
+button {
+    margin: 6vmin 0 10vmin 0;
+}
+
+h1 {
+    padding-top: 10vmin;
+}
+

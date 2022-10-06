@@ -2,10 +2,6 @@
 
 {% block title %}Othello{% endblock %}
 
-{% block stylesheets %}
-    {{ encore_entry_link_tags('othello') }}
-{% endblock %}
-
 {% block body %}
     <section id="othelloSection">
         <div class="container-fluid" id="othelloContainer">
@@ -44,6 +40,10 @@
             </div>
         </div>
     </section>
+{% endblock %}
+
+{% block stylesheets %}
+    {{ encore_entry_link_tags('othello') }}
 {% endblock %}
 
 {% block javascripts %}
