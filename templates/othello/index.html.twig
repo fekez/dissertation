@@ -7,42 +7,48 @@
 {% endblock %}
 
 {% block body %}
-    <div class="container-fluid" id="container">
-        <div class="row align-items-center" id="divRow">
-            <div class="col-md-2 col-sm-12 col-12 align-middle justify-content-center text-center">
-                <div class="d-md-block d-sm-inline d-inline">
-                    <i class="fa fa-circle" side="white" game="0"></i>
-                    <span id="lightCount"></span>
+    <section id="othelloSection">
+        <div class="container-fluid" id="othelloContainer">
+            <div class="row align-items-center" id="divRow">
+                <div class="col-12 align-middle justify-content-center text-center">
+                    <div class="d-block text-center">
+                        <button id="buttonBack" class="btn btn-warning">Vissza</button>
+                        <button id="buttonReset" class="btn btn-success">Új játék</button>
+                    </div>
                 </div>
-                <div class="d-md-block d-sm-inline d-inline" id="divTable">
-                    <i class="fa fa-circle" side="black" game="0"></i>
-                    <span id="darkCount"></span>
+                <div class="col-lg-2 col-sm-12 col-12 align-middle justify-content-center text-center">
+                    <div class="d-lg-block d-sm-inline d-inline">
+                        <i class="fa fa-circle" side="white" game="0"></i>
+                        <span id="lightCount" class="othello"></span>
+                    </div>
+                    <div class="d-lg-block d-sm-inline d-inline" id="divTable">
+                        <i class="fa fa-circle" side="black" game="0"></i>
+                        <span id="darkCount" class="othello"></span>
+                    </div>
                 </div>
-            </div>
-            <div class="col-md-8 col-sm-12 col-12">
-                <div class="d-block text-center">
-                    <button id="buttonBack" class="btn btn-warning">Vissza</button>
-                    <button id="buttonReset" class="btn btn-success">Új játék</button>
+                <div class="col-lg-8 col-sm-12 col-12">
+                    <table id="othelloTable" class="table mx-auto">
+                        <tbody id="othelloTableBody"></tbody>
+                    </table>
                 </div>
-                <table id="othelloTable" class="table table-bordered mx-auto">
-                    <tbody id="othelloTableBody"></tbody>
-                </table>
-            </div>
-            <div class="d-inline col-md-2 col-sm-12 col-12 align-middle justify-content-center text-center">
-                <div class="d-md-block d-sm-inline d-inline">
-                    <i id="lightRemainder" class="fa fa-circle" side="white" game="0"></i>
-                    <span></span>
-                </div>
-                <div class="d-md-block d-sm-inline d-inline">
-                    <i id="darkRemainder" class="fa fa-circle" side="black" game="0"></i>
-                    <span></span>
+                <div class="d-inline col-lg-2 col-sm-12 col-12 align-middle justify-content-center text-center">
+                    <div class="d-lg-block d-sm-inline d-inline">
+                        <i class="fa fa-circle" side="white" game="0"></i>
+                        <span id="lightRemainder" class="othello"></span>
+                    </div>
+                    <div class="d-lg-block d-sm-inline d-inline">
+                        <i class="fa fa-circle" side="black" game="0"></i>
+                        <span id="darkRemainder" class="othello"></span>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-
-    {% block javascripts %}
-        {{ parent() }}
-        {{ encore_entry_script_tags('othello') }}
-    {% endblock %}
+    </section>
 {% endblock %}
+
+{% block javascripts %}
+    {{ parent() }}
+    {{ encore_entry_script_tags('othello') }}
+{% endblock %}
+
+

@@ -1,0 +1,7 @@
+#RewriteEngine On
+#RewriteRule ^$ public/index.php [L]
+#RewriteRule ^((?!public/).*)$ public/$1 [L,NC]
+
+RewriteEngine on
+RewriteCond %{REQUEST_URI} !^public
+RewriteRule ^(.*)$ public/$1 [L]

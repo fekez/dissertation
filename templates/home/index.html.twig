@@ -1,20 +1,83 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Hello HomeController!{% endblock %}
+{% block title %}Kezdőlap{% endblock %}
 
-{% block body %}
-<style>
-    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
-    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
-</style>
+{% block slider_body %}
+    <section class="slider_section ">
+        <div id="customCarousel1" class="carousel slide" data-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <div class="container ">
+                        <div class="row">
+                            <div class="col-md-7 col-lg-6 ">
+                                <div class="detail-box">
+                                    <h1>
+                                        Othello
+                                    </h1>
+                                    <p>
+                                        Népszerű kétszemélyes táblajáték.
+                                    </p>
+                                    <div class="btn-box">
+                                        <a href="{{ path('app_othello') }}" class="btn1">
+                                            Próbáld ki most!
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item ">
+                    <div class="container ">
+                        <div class="row">
+                            <div class="col-md-7 col-lg-6 ">
+                                <div class="detail-box">
+                                    <h1>
+                                        Fast Food Restaurant
+                                    </h1>
+                                    <p>
+                                        Doloremque, itaque aperiam facilis rerum, commodi, temporibus sapiente ad mollitia laborum quam quisquam esse error unde. Tempora ex doloremque, labore, sunt repellat dolore, iste magni quos nihil ducimus libero ipsam.
+                                    </p>
+                                    <div class="btn-box">
+                                        <a href="" class="btn1">
+                                            Order Now
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="container ">
+                        <div class="row">
+                            <div class="col-md-7 col-lg-6 ">
+                                <div class="detail-box">
+                                    <h1>
+                                        Fast Food Restaurant
+                                    </h1>
+                                    <p>
+                                        Doloremque, itaque aperiam facilis rerum, commodi, temporibus sapiente ad mollitia laborum quam quisquam esse error unde. Tempora ex doloremque, labore, sunt repellat dolore, iste magni quos nihil ducimus libero ipsam.
+                                    </p>
+                                    <div class="btn-box">
+                                        <a href="" class="btn1">
+                                            Order Now
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <ol class="carousel-indicators">
+                    <li data-target="#customCarousel1" data-slide-to="0" class="active"></li>
+                    <li data-target="#customCarousel1" data-slide-to="1"></li>
+                    <li data-target="#customCarousel1" data-slide-to="2"></li>
+                </ol>
+            </div>
+        </div>
 
-<div class="example-wrapper">
-    <h1>Hello {{ controller_name }}! ✅</h1>
-
-    This friendly message is coming from:
-    <ul>
-        <li>Your controller at <code><a href="{{ 'C:/xampp/htdocs/dissertation/src/Controller/HomeController.php'|file_link(0) }}">src/Controller/HomeController.php</a></code></li>
-        <li>Your template at <code><a href="{{ 'C:/xampp/htdocs/dissertation/templates/home/index.html.twig'|file_link(0) }}">templates/home/index.html.twig</a></code></li>
-    </ul>
-</div>
+    </section>
 {% endblock %}

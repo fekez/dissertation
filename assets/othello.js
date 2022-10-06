@@ -36,6 +36,7 @@ const initBack = function () {
             $('i').unbind();
 
             $('i.fa.fa-circle-thin').on('click', (e) => {
+                saveMoves(lastMove);
                 moveResponse($('#' + e.target['id']).attr('data'));
             });
         }
@@ -43,7 +44,7 @@ const initBack = function () {
 }
 
 const initSize = function () {
-    const container = document.querySelector('#container');
+    const container = document.querySelector('#othelloContainer');
     const divButton = document.createElement('div');
     const six = document.createElement('button');
     const eight = document.createElement('button');
@@ -73,7 +74,7 @@ const initSize = function () {
 }
 
 const initSide = function () {
-    const container = document.querySelector('#container');
+    const container = document.querySelector('#othelloContainer');
     const divButton = document.querySelector('div#divButton');
     const light = document.createElement('button');
     const dark = document.createElement('button');
@@ -122,6 +123,7 @@ const initBoard = function () {
 
             lightCount = darkCount = 0;
             moves = [];
+            localStorage.setItem('moves', JSON.stringify(moves));
 
 
             const tableBody = document.getElementById('othelloTableBody');
@@ -164,16 +166,18 @@ const initBoard = function () {
 
             if(localStorage.getItem('side') === 'white') {
                 moveResponse();
-            } else {
-                moves.push(data);
-                localStorage.setItem('moves', JSON.stringify(moves));
             }
+            // else {
+            //     moves.push(data);
+            //     localStorage.setItem('moves', JSON.stringify(moves));
+            // }
 
 
 
             $('i').unbind();
 
             $('i.fa.fa-circle-thin').on('click', (e) => {
+                saveMoves(data);
                 moveResponse($('#' + e.target['id']).attr('data'));
             })
         },
@@ -231,6 +235,7 @@ const showChanges = function (data) {
     const board = data['table'];
     const sides = data['sides'];
     lightCount = darkCount = 0;
+
 
     $("i[game='1']").each((index, object) => {
         const field = board.find((item) => {

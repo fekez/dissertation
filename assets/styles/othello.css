@@ -1,12 +1,20 @@
 table#othelloTable {
     width: 70vmin;
     height: 70vmin;
-    background-color: darkgreen;
-    border: 1px solid black;
+    border: 1px solid black !important;
+    background-color: #28a745;
 }
 
-i {
+td, tr {
+    border: 1px solid black !important;
+}
+
+i.fa{
     font-size: 5vmin;
+}
+
+i.fa[game='0']{
+    font-size: 8vmin;
 }
 
 i.fa.fa-circle[side='white']{
@@ -22,20 +30,39 @@ i.fa.fa-circle.was::before {
     border-radius: 50%;
 }
 
-
-
 i.fa.fa-circle-thin {
     color: black;
 }
 
 #divButton {
-    margin-top: 49vh;
+    padding: 35vh 0vh;
 }
 
-div.row {
-    background-color: azure;
+section#othelloSection{
+    /*background-image: url("https://media.istockphoto.com/photos/abstract-pastel-teal-color-and-gradient-cyan-light-background-with-picture-id1352174478?b=1&k=20&m=1352174478&s=170667a&w=0&h=65U48Qmb7YSlFfnZPCo9Ags6nO001ezS07rBPtMnG1s=");*/
+    /*background-color: #eeeeee;*/
+    /*background-position: center;*/
+    /*background-size: cover;*/
+    background: rgb(137,166,172);
+    background: linear-gradient(90deg, rgba(137,166,172,1) 0%,
+                                        rgba(129,162,169,1) 15%,
+                                        rgba(148,179,184,1) 32%,
+                                        rgba(163,191,195,1) 48%,
+                                        rgba(163,191,195,1) 60%,
+                                        rgba(129,162,169,1) 85%,
+                                        rgba(137,166,172,1) 100%);
+}
+
+div#divButton button, div#divRow button {
+    padding: 2vmin 6vmin;
+    font-size: 4vmin;
+    margin: 4vmin 2vmin;
 }
 
 span {
-    font-size: 5vmin;
+    font-size: 8vmin;
+}
+
+.hero_area {
+    min-height: auto;
 }

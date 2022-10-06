@@ -10,32 +10,32 @@ class OthelloField {
     /**
      * @var int $position
      */
-    private int $position;
+    private $position;
 
     /**
      * @var string $side
      */
-    private string $side;
+    private $side;
 
     /**
      * @var float $score
      */
-    private float $score = 1;
+    private $score = 1;
 
     /**
      * @var string $uuid
      */
-    private string $uuid;
+    private $uuid;
 
     /**
      * @var string $status
      */
-    private string $status;
+    private $status;
 
     /**
      * @var array $keyEditors
      */
-    private static array $keyEditors = [1, -1, 99, -99, 100, -100, 101, -101];
+    private static $keyEditors = [1, -1, 99, -99, 100, -100, 101, -101];
 
 
 
